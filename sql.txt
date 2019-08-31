@@ -1,0 +1,44 @@
+CREATE table "STAFF" (
+    "SID"        NUMBER(10,0),
+    "SNAME"      VARCHAR2(100),
+    "SEX"        VARCHAR2(100),
+    "DOB"        DATE,
+    "ADDRESS"    VARCHAR2(200),
+    "PHNO"       NUMBER(12,0),
+    "DOJ"        DATE,
+    "PASSWORD"   VARCHAR2(100),
+    constraint  "STAFF_PK" primary key ("SID")
+)
+/
+
+CREATE table "ADMIN" (
+    "AID"        NUMBER(10,0),
+    "ANAME"      VARCHAR2(100),
+    "PWD"        VARCHAR2(100),
+    constraint  "ADMIN_PK" primary key ("AID")
+)
+/
+
+CREATE table "CUSTOMER" (
+    "CID"        NUMBER(10,0),
+    "CNAME"      VARCHAR2(100),
+    "SEX"        VARCHAR2(100),
+    "DOB"        DATE,
+    "BAL"        NUMBER(38,2),
+    "ADDRESS"    VARCHAR2(100),
+    "PHNO"       NUMBER(12,0),
+    "PWD"        VARCHAR2(100),
+    constraint  "CUSTOMER_PK" primary key ("CID")
+)
+/
+CREATE table "TRANSACTION" (
+    "TID"        NUMBER(10,0),
+    "FROM_CID"   NUMBER(10,0),
+    "TO_CID"     NUMBER(10,0),
+    "DATE_TIME"  VARCHAR2(100),
+    "AMOUNT"     NUMBER(38,2),
+    constraint  "TRANSACTION_PK" primary key ("TID")
+)
+/
+
+
